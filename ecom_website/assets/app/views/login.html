@@ -1,0 +1,21 @@
+<div>
+
+
+<form>
+	<input type="text" placeholder="Enter Your User Name" ng-model="userName" required> <br>
+	<input type="password" placeholder="Enter Your Password" ng-model="pass" required><br><br>
+	<button type="submit" ng-click="validateUser()">Login</button>
+</form>
+
+{{userName}} <br>
+{{pass}} <br>
+
+{{isAuth}}
+
+</div>
+
+<div ng-controller="demoController">
+	{{userName}}
+
+
+</div>

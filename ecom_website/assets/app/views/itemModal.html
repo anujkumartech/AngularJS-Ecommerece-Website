@@ -1,0 +1,23 @@
+<div class="modal-header">
+    <h3 class="modal-title">Product Details</h3>
+</div>
+
+<div class="modal-body">
+    <ul>
+        <li>Name of the Album : {{details.productname}}</li>
+		<li>Price : {{details.price | currency}}</li> 
+		<li>Id of title: {{details.id}}</li> 
+		<li>Description of the Title : {{details.Description}}</li> 
+		<li>How Popular it is : {{details.Popularity}}</li> 
+        
+    </ul>
+   
+</div>
+        
+<div class="modal-footer">
+	
+    <button class="btn btn-primary" ng-click="ok()" ng-show="addToCartShow">Add Item to Cart</button>
+    <button class="btn btn-warning" ng-click="cancel()">Go Back</button>
+</div>
+
+

@@ -1,0 +1,43 @@
+        removeCartItem:function(item){
+          var indexOfItem=cartConsolidatedData.indexOf(item);
+          cartConsolidatedData.splice(indexOfItem, 1);
+          return cartConsolidatedData;
+        }	
+		
+		
+		 updateCart:function(cartItem){
+          cartConsolidatedData=cartItem;
+          return cartConsolidatedData;
+        },
+
+		
+		         var diff;
+          var addRemove;  
+          for(x in cartItem){
+            //console.log(cartItem[x].quantity+"  "+cartItem[x].productname+" logged by first loop")
+            for(y in cartConsolidatedData){
+              //console.log(cartConsolidatedData[y].quantity+"  "+cartConsolidatedData[y].productname+" logged by second loop")
+              if(cartItem[x].productname==cartConsolidatedData[y].productname){
+                console.log("Same Name found at "+cartConsolidatedData[y].productname)
+                console.log(cartConsolidatedData[y].quantity+" is quantity for from saved value"+cartConsolidatedData[y].productname)
+                console.log(cartItem[x].quantity+" is quantity for from function call "+cartItem[x].productname)
+                if(cartItem[x].quantity !=cartConsolidatedData[y].quantity){
+                  var tem=cartItem[x].quantity-cartConsolidatedData[y].quantity;
+                  console.log(tem);
+                  if(tem>0)
+                    addRemove=true;
+                  else
+                    addRemove=false;
+                  diff=Math.abs(temp);      
+                }  
+              }
+            }
+          }
+		  
+		  
+		          removeCartItem:function(item){
+          var indexOfItem=userCart.indexOf(item);
+          userCart.splice(indexOfItem, 1);
+          formCart();
+          return cartConsolidatedData;
+        },

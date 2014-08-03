@@ -1,0 +1,74 @@
+   	getCurrentTotal: function(){
+      		
+      		var currentSum=0;
+				  for (var key in cartSummary)
+				  {  
+   					if (cartSummary.hasOwnProperty(key))
+  					{    
+  						// get sum     
+     					currentSum = currentSum+parseInt(cartSummary[key].price);
+     					
+     					continue;
+   					};
+				  }
+			    return currentSum;
+      	},
+
+		
+		 removeCartItem:function(item){
+          var indexOfItem=cartSummary.indexOf(item);
+          cartSummary.splice(indexOfItem, 1);
+        },
+		
+		 getCartConsilidatedData:function(){
+          cartConsolidatedData=[];
+          var dup=false;
+          var temp;
+
+          for(x in cartTestData){
+            dup=false;  
+            for(z in cartConsolidatedData){
+              if(cartConsolidatedData[z].productname==cartTestData[x].productname){
+                cartConsolidatedData[z].quantity=cartConsolidatedData[z].quantity+1;
+                dup=true;
+                break;
+              }
+            }     
+            if(!dup){
+              temp=cartTestData[x];
+              temp.quantity=1;
+              cartConsolidatedData.push(temp);
+            } 
+          }
+          
+
+          return cartConsolidatedData;          
+
+        },
+		
+		
+		        getCartConsilidatedData:function(){
+          cartConsolidatedData=[];
+          var dup=false;
+          var temp;
+
+          for(x in cartSummary){
+            dup=false;  
+            for(z in cartConsolidatedData){
+              if(cartConsolidatedData[z].productname==cartSummary[x].productname){
+                cartConsolidatedData[z].quantity=cartConsolidatedData[z].quantity+1;
+                dup=true;
+                break;
+              }
+            }     
+            if(!dup){
+              temp=cartSummary[x];
+              temp.quantity=1;
+              cartConsolidatedData.push(temp);
+            } 
+          }
+          
+
+          return cartConsolidatedData;          
+
+        },
