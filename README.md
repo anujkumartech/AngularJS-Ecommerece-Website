@@ -11,7 +11,7 @@ A typical E-commerece system has 5 entity objects to hold various data.
 
 These entity objects are accessed by control object and are displayed on boundary objects(Typically web pages).
 
-Keeping same concept in at core  , we can use AngularJS , a very good MVC(W) framework from Google at front-end as well. 
+Keeping same concept at core  , we can use AngularJS , a very good MVC(W) framework from Google at front-end as well. 
 
 Notes about this project:
 1. All data related definitions and sharing of data happens through services(Acting as entity object)
