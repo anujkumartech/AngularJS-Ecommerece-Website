@@ -1,0 +1,27 @@
+[
+	{	"productname": "Donald Duck",
+		"price" : "50",
+		"id" : 0,
+		"url": "./image/0.jpg"
+ 	},
+ 	{	"productname": "Eve and Wall-e",
+		"price" : "60",
+		"id" : 1,
+		"url": "./image/1.jpg"
+ 	},
+ 	{	"productname": "Cars",
+		"price" : "30",
+		"id" : 2,
+		"url": "./image/2.jpg"
+ 	},
+ 	{	"productname": "Mickey Mouse",
+		"price" : "40",
+		"id" : 3,
+		"url": "./image/3.jpg"
+ 	}, 	
+	{	"productname": "Barbie",
+		"price" : "80",
+		"id" : 4,
+		"url": "./image/4.jpg"
+ 	}
+]

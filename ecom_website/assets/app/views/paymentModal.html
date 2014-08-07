@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <h3 class="modal-title">Product Details</h3>
+</div>
+
+<div class="modal-body" id="printable">
+	<p>Payment Received <br /> {{paymentInfo[2] | currency }}</p>
+	
+	
+	<p>Your Order Will be shipped on Below address</p>
+	<span ng-repeat="addLine in paymentInfo[0]">{{addLine}} <span ng-show="$index !=4">,<br /></span>
+	</span>	
+	
+</div>
+        
+<div class="modal-footer">
+	<button class="btn btn-primary" ng-click="printOrder()">Print Order</button>
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Go to Products</button>
+</div>
+
+

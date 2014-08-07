@@ -1,0 +1,48 @@
+<div style="width:70%;margin:5% 15%;" >
+<p style="float:left:clear:both"><strong> Due Amount: {{paymentDetails[2] | currency}}</strong></p>
+<p><strong>Shipping	 Address:</strong></p>
+<p ng-repeat="addLine in paymentDetails[0]">{{addLine}} <span ng-show="$index !=4">,</span>
+</p>
+	<form id="paymentForm" style="margin:5% 5%:float:left">		
+		Credit Card Number:<input only-digits style="width:10%;"  ng-model="creaditCard[0]" type="text" name="creditCard1" id="creditCard1" maxlength="4" required />
+		-
+		<input only-digits  style="width:10%;" ng-model="creaditCard[1]" type="text" name="creditCard2" id="creditCard2" maxlength="4" required />
+		-
+		<input only-digits  style="width:10%;"  ng-model="creaditCard[2]" type="text" name="creditCard3" id="creditCard3" maxlength="4" required />
+		-
+		<input only-digits  style="width:10%;"  ng-model="creaditCard[3]" type="text" name="creditCard4" id="creditCard4" maxlength="4"required />
+		<br />
+		<br />
+		<p class="btn btn-danger">{{warningMessage}}</p>
+		<br />
+		<br />
+		Card Expiry:
+		<select name='expireMM' id='expireMM' ng-model="expirayDate[0]">
+				<OPTION VALUE="">Month</option>
+				<OPTION VALUE="01">January (01)</option>
+				<OPTION VALUE="02">February (02)</option>
+				<OPTION VALUE="03">March (03)</option>
+				<OPTION VALUE="04">April (04)</option>
+				<OPTION VALUE="05">May (05)</option>
+				<OPTION VALUE="06">June (06)</option>
+				<OPTION VALUE="07">July (07)</option>
+				<OPTION VALUE="08">August (08)</option>
+				<OPTION VALUE="09">September (09)</option>
+				<OPTION VALUE="10">October (10)</option>
+				<OPTION VALUE="11">November (11)</option>
+				<OPTION VALUE="12">December (12)</option>
+		</select>/ 
+		<select name='expireYY' id='expireYY' ng-model="expirayDate[1]">
+			<option value=''>Year</option>
+			<option value='14'>2014</option>
+			<option value='15'>2015</option>
+			<option value='16'>2016</option>
+			<option value='17'>2017</option>
+			<option value='18'>2018</option>
+			<option value='19'>2019</option>
+			<option value='20'>2020</option>
+		</select> 
+		<br>
+		<button type="submit" class="btn btn-warning" ng-click="makePayment()">Submit</button>		
+	</form>	
+</div>
